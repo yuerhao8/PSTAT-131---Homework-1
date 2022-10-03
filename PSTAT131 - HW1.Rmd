@@ -7,6 +7,9 @@ date: "2022-10-01"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(MASS) # For Boston data set
+library(tidymodels)
+library(ISLR)
 ```
 
 ## Machine Learning Main Ideas
@@ -87,7 +90,7 @@ ANS: In the first question, the campaign is centered on figuring out the likelih
 In the second question, the campaign is more interested in the precise relationship between a candidate interaction (predictor), and the voter behavior (outcome), therefore the first question is inferential.
 
 ## Exploratory Data Analysis
-This section will ask you to complete several exercises. For this homework assignment, we’ll be working with the mpg data set that is loaded when you load the tidyverse. Make sure you load the tidyverse and any other packages you need.
+This section will ask you to complete several exercises. For this homework assignment, we’ll be working with the `mpg` data set that is loaded when you load the tidyverse. Make sure you load the tidyverse and any other packages you need.
 
 Exploratory data analysis (or EDA) is not based on a specific set of rules or formulas. It is more of a state of curiosity about data. It’s an iterative process of:
 
@@ -96,11 +99,45 @@ visualize and transform your data as necessary to get answers
 use what you learned to generate more questions
 A couple questions are always useful when you start out. These are “what variation occurs within the variables,” and “what covariation occurs between the variables.”
 
-You should use the tidyverse and ggplot2 for these exercises.
+You should use the tidyverse and `ggplot2` for these exercises.
 
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+### Exercise 1:
+We are interested in highway miles per gallon, or the `hwy` variable. Create a histogram of this variable. Describe what you see/learn.
+```{r E1, echo=TRUE}
+mpg %>%
+  ggplot(aes(x=hwy)) +
+  geom_histogram(bins=30)
 ```
+
+
+The distribution of highway mileage shows a positively skewed distribution. Although such distributions are quite uncommon, it also almost seems to have two maximum point; the highest peak is at 26–27 mpg and another around 16–17 mpg. It seems like no vehicles get less than 10 mpg and few vehicles get more than 40 highway miles per gallon.
+
+
+
+
+### Exercise 2:
+Create a scatterplot. Put `hwy` on the x-axis and `cty` on the y-axis. Describe what you notice. Is there a relationship between `hwy` and `cty`? What does this mean?
+
+```{r}
+mpg %>%
+  ggplot(aes(x = hwy, y = cty)) +
+  geom_point()
+```
+
+
+```{r}
+mpg %>%
+  ggplot(aes(x = hwy, y = cty)) +
+  geom_point()
+```
+
+
+### Exercise 3:
+Make a bar plot of `manufacturer`. Flip it so that the manufacturers are on the y-axis. Order the bars by height. Which manufacturer produced the most cars? Which produced the least?
+
+```{r}
+
+```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
