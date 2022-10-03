@@ -1,5 +1,6 @@
 ---
 title: "PSTAT 131/231 - Homework 1"
+Author: "Yuer Hao - 9641044"
 output: html_document
 date: "2022-10-01"
 ---
@@ -18,13 +19,84 @@ You don’t have to rephrase everything in your own words, but if you quote dire
 
 Define supervised and unsupervised learning. What are the difference(s) between them?
 
-Ans: Both supervised and unsupervised learning are types of machine learning. In supervised learning, actual observed values of the outcome are known, and the algorithms are trained using labeled data. Therefore, the objective of supervised learning is to develop the model such that it can forecast the outcome when presented with new data. Unsupervised learning, on the other hand, uses machine learning algorithms on data sets without any actual labeled observations in order to find hidden patterns in the data.
+ANS: Both supervised and unsupervised learning are types of machine learning. In supervised learning, actual observed values of the outcome are known, and the algorithms are trained using labeled data. Therefore, the objective of supervised learning is to develop the model such that it can forecast the outcome when presented with new data. Unsupervised learning, on the other hand, uses machine learning algorithms on data sets without any actual labeled observations in order to find hidden patterns in the data.
 
 ### Question 2:
 
 Explain the difference between a regression model and a classification model, specifically in the context of machine learning.
 
-Ans：
+ANS: In the context of machine learning, the distinction between regression and classification models is that regression models include a continuous outcome whereas classification models contain a categorical outcome.
+
+### Question 3:
+
+Name two commonly used metrics for regression ML problems. Name two commonly used metrics for classification ML problems.
+
+ANS: For regression ML problems, two commonly used metrics are Mean squared error (MSE), and Mean absolute error (MAE).
+
+For classification ML problems, two commonly used metrics are precision and the area under the curve (AUC).
+
+
+### Question 4:
+
+As discussed, statistical models can be used for different purposes. These purposes can generally be classified into the following three categories. Provide a brief description of each.
+
+ANS:
+Descriptive models: used to emphasize a pattern or trends in data visually, for as when a scatterplot is fitted using a linear regression to show a relationship.
+
+Inferential models: used to draw conclusions regarding the relationship(s) that exist between the outcome and the predictor(s). The goal is to find out what is are the significant features and implications for theories.
+
+Predictive models: It is used to predict the best-fitted outcome variable as precisely as feasible while minimizing reducible error; it is not focused on hypothesis testing.
+
+(reference - Lecture: Course Overview and IntroductionFile,P39)
+
+
+
+### Question 5:
+
+Predictive models are frequently used in machine learning, and they can usually be described as either mechanistic or empirically-driven. Answer the following questions.
+
+i) Define mechanistic. Define empirically-driven. How do these model types differ? How are they similar?
+
+ANS: 
+A mechanistic model makes predictions about the future based on a theory. An  empirically-driven model looks at actual occurrences to build a theory. So they both aim to find trends or patterns.
+Mechanistic models assume a parametric form for the relationship between the predictor(s) and the outcome, which will unlikely match the true, unknown form. Adding parameters to mechanistic models will make it more flexible.
+Empirically-driven models make little to no assumptions regarding the form of the relationship, and are originally more flexible. 
+
+ii) In general, is a mechanistic or empirically-driven model easier to understand? Explain your choice.
+
+ANS:
+Mechanistic models generally fit very basic parametric forms, making them more straightforward to understand.
+
+iii) Describe how the bias-variance tradeoff is related to the use of mechanistic or empirically-driven models.
+
+ANS:
+Mechanistic models often have lower variance and higher bias. Empirically-driven models often exhibit less bias and more variance.
+
+
+### Question 6:
+
+A political candidate’s campaign has collected some detailed voter history data from their constituents. The campaign is interested in two questions:
+
+Given a voter’s profile/data, how likely is it that they will vote in favor of the candidate?
+
+How would a voter’s likelihood of support for the candidate change if they had personal contact with the candidate?
+
+Classify each question as either predictive or inferential. Explain your reasoning for each.
+
+ANS: In the first question, the campaign is centered on figuring out the likelihood of voter behavior, therefore the first question is predictive.
+In the second question, the campaign is more interested in the precise relationship between a candidate interaction (predictor), and the voter behavior (outcome), therefore the first question is inferential.
+
+## Exploratory Data Analysis
+This section will ask you to complete several exercises. For this homework assignment, we’ll be working with the mpg data set that is loaded when you load the tidyverse. Make sure you load the tidyverse and any other packages you need.
+
+Exploratory data analysis (or EDA) is not based on a specific set of rules or formulas. It is more of a state of curiosity about data. It’s an iterative process of:
+
+generating questions about data
+visualize and transform your data as necessary to get answers
+use what you learned to generate more questions
+A couple questions are always useful when you start out. These are “what variation occurs within the variables,” and “what covariation occurs between the variables.”
+
+You should use the tidyverse and ggplot2 for these exercises.
 
 
 ```{r pressure, echo=FALSE}
