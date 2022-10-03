@@ -1,0 +1,34 @@
+---
+title: "PSTAT 131/231 - Homework 1"
+output: html_document
+date: "2022-10-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Machine Learning Main Ideas
+
+Please answer the following questions. Be sure that your solutions are clearly marked and that your document is neatly formatted.
+
+You don’t have to rephrase everything in your own words, but if you quote directly, you should cite whatever materials you use (this can be as simple as “from the lecture/page # of book”).
+
+### Question 1:
+
+Define supervised and unsupervised learning. What are the difference(s) between them?
+
+Ans: Both supervised and unsupervised learning are types of machine learning. In supervised learning, actual observed values of the outcome are known, and the algorithms are trained using labeled data. Therefore, the objective of supervised learning is to develop the model such that it can forecast the outcome when presented with new data. Unsupervised learning, on the other hand, uses machine learning algorithms on data sets without any actual labeled observations in order to find hidden patterns in the data.
+
+### Question 2:
+
+Explain the difference between a regression model and a classification model, specifically in the context of machine learning.
+
+Ans：
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
